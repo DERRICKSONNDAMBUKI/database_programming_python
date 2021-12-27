@@ -9,12 +9,12 @@ c.execute(
     SELECT * FROM persons;
     '''
     )
-print(c.fetchall())
+print('all rows in the table are:\n ',c.fetchall())
 
 # select specific row
 c.execute('''
           SELECT * FROM persons WHERE last_name = 'Ndambuki';
           ''')
-print(c.fetchall())
+print('row with last name being Ndambuki are:\n ',c.fetchall())
 conn.commit()
 conn.close()
